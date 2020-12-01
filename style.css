@@ -1,0 +1,217 @@
+body{
+  //background-color: blue;
+}
+
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+@media(min-width:468px){
+    .container-1{
+      display:flex;
+      /*
+      align-items:flex-start;
+      align-items:flex-end;
+      align-items:center;
+
+      flex-direction:column;
+      */
+    }
+
+    .container-2{
+      display:flex;
+      /*
+      justify-content:flex-start;
+      justify-content:flex-end;
+      justify-content:center;
+      justify-content:space-around;
+      */
+      justify-content:space-between;
+    }
+  }
+
+  .container-3{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+
+  .container-1 div, .container-2 div, .container-3 div{
+    border:1px #ccc solid;
+    padding:10px;
+  }
+
+  .box-1{
+    flex:2;
+    order:2;
+  }
+
+  .box-2{
+    flex:1;
+    order:1;
+  }
+
+  .box-3{
+    flex:1;
+    order: 3;
+  }
+
+  .container-2-box{
+    flex-basis: 27%;
+  }
+
+  .container-3-box{
+    flex-basis:12%;
+  }
+
+
+
+/*
+
+Main site CSS below here
+
+ */
+
+
+ /* || General setup */
+
+ html, body {
+   margin: 0;
+   padding: 0;
+ }
+
+ html {
+   font-size: 10px;
+   background-color: #a9a9a9;
+ }
+
+ body {
+   width: 70%;
+   margin: 0 auto;
+ }
+
+ /* || typography */
+
+ h1, h2, h3 {
+   font-family: 'Sonsie One', cursive;
+   color: #2a2a2a;
+ }
+
+ p, input, li {
+   font-family: 'Open Sans Condensed', sans-serif;
+   color: #2a2a2a;
+ }
+
+ h1 {
+   font-size: 4rem;
+   text-align: center;
+   color: white;
+   text-shadow: 2px 2px 10px black;
+ }
+
+ h2 {
+   font-size: 3rem;
+   text-align: center;
+ }
+
+ h3 {
+   font-size: 2.2rem;
+ }
+
+ p, li {
+   font-size: 1.6rem;
+   line-height: 1.5;
+ }
+
+ /* || header layout */
+
+ nav, article, aside, footer {
+   background-color: white;
+   padding: 1%;
+ }
+
+ nav {
+   height: 50px;
+   background-color: #ff80ff;
+   display: flex;
+   margin-bottom: 10px;
+ }
+
+ nav ul {
+   padding: 0;
+   list-style-type: none;
+   flex: 2;
+   display: flex;
+ }
+
+ nav li {
+   display: inline;
+   text-align: center;
+   flex: 1;
+ }
+
+ nav a {
+   display: inline-block;
+   font-size: 2rem;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: black;
+ }
+
+ nav form {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   height: 100%;
+   padding: 0 2em;
+ }
+
+ input {
+   font-size: 1.6rem;
+   height: 32px;
+ }
+
+ input[type="search"] {
+   flex: 3;
+ }
+
+ input[type="submit"] {
+   flex: 1;
+   margin-left: 1rem;
+   background: #333;
+   border: 0;
+   color: white;
+ }
+
+ /* || main layout */
+
+ main {
+   display: flex;
+ }
+
+ article {
+   flex: 4;
+ }
+
+ aside {
+   flex: 1;
+   margin-left: 10px;
+   background-color: #ff80ff;
+ }
+
+ aside li {
+   padding-bottom: 10px;
+ }
+
+ footer {
+   margin-top: 10px;
+ }
